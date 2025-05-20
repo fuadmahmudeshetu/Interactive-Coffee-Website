@@ -160,6 +160,7 @@ header .navbar {
     border: 2px solid transparent;
     font-weight: var(--font-weight-medium);
     transition: 0.3s ease;
+    margin: 20px;
 }
 
 .hero-section .hero-details .button:hover,
@@ -232,12 +233,57 @@ header .navbar {
 
 /* Menu section styling */
 
-
-
 .menu-section {
-    padding: 30px;
+    color: var(--white-color);
+    background: var(--dark-color);
+    padding: 50px 0 100px;
 }
 
+.menu-section .menu-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 110px;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.menu-section .menu-list .menu-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: calc(100% / 3 - 110px);
+}
+
+.menu-section .menu-list .menu-item .menu-image {
+    max-width: 83%;
+    aspect-ratio: 1;
+}
+
+.menu-section .menu-list .menu-item .name {
+    margin: 12px 0;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+}
+
+.menu-section .menu-list .menu-item .text {
+    font-size: var(--font-size-m);
+}
+
+/* Responsive media query code for max width 1024px */
+@media screen and (max-width: 900px) {
+    .menu-section .menu-list {
+        gap: 60px;
+    }
+
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 3 - 60px);
+    }
+}
+
+/* Responsive media query code for max width 900px */
 @media screen and (max-width: 900px) {
     :root {
         --font-size-m: 1rem;
@@ -326,10 +372,32 @@ header .navbar {
         flex-direction: column;
     }
 
-        .about-section .about-image-wrapper .about-image {
-            width: 100%;
-            height: 100%;
-            max-width: 250px;
-            aspect-ratio: 1;
-        }
+    .about-section .about-image-wrapper .about-image {
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        aspect-ratio: 1;
+    }
+
+    .menu-section .menu-list {
+        gap: 30px;
+    }
+
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 2 - 30px);
+    }
+
+    .menu-section .menu-list .menu-item .menu-image {
+        max-width: 200px;
+    }
+}
+
+/* Responsive media query code for max width 640px */
+@media screen and (max-width: 640px) {
+    .menu-section .menu-list {
+        gap: 60px;
+    }
+    .menu-section .menu-list .menu-item {
+        width: 100%;
+    }
 }
