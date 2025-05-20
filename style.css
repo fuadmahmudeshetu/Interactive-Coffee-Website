@@ -230,6 +230,14 @@ header .navbar {
     color: var(--secondary-color);
 }
 
+/* Menu section styling */
+
+
+
+.menu-section {
+    padding: 30px;
+}
+
 @media screen and (max-width: 900px) {
     :root {
         --font-size-m: 1rem;
