@@ -475,6 +475,9 @@ header .navbar {
     .gallery-section .gallery-list .gallery-item {
         width: calc(100% / 2 - 30px);
     }
+    .gallery-section .gallery-list .gallery-item {
+        gap: 30px;
+    }
 }
 
 /* Responsive media query code for max width 640px */
@@ -482,7 +485,8 @@ header .navbar {
     .menu-section .menu-list {
         gap: 60px;
     }
-    .menu-section .menu-list .menu-item {
+    .menu-section .menu-list .menu-item,
+    .gallery-section .gallery-list .gallery-item {
         width: 100%;
     }
 
